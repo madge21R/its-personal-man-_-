@@ -1,3 +1,7 @@
+body{
+font-size: small;
+
+}
 nav {
     background-color: rgb(203, 209, 203);
     padding: 20px;
@@ -56,3 +60,17 @@ nav {
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+a {
+  color: rgb(9, 9, 11);
+}
+#myheader {
+  
+   height: 60vh;
+   background-color: rgb(203, 209, 203);
+   background-size: cover;
+   background-position: center;
+   display: flex;
+}
+a {
+    padding: 0 15px;
+  }
