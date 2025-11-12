@@ -1,6 +1,10 @@
 body{
 font-size: small;
-
+    margin: 10px;
+    padding: 05px;
+    background-image: url(c26750c3-e88c-4b54-80a9-a7e8d292497d.jpg);
+    
+    font-family: Arial, sans-serif;
 }
 nav {
     background-color: rgb(203, 209, 203);
