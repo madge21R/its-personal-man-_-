@@ -5,17 +5,19 @@ body{
     background-image: url(c26750c3-e88c-4b54-80a9-a7e8d292497d.jpg);
     font-family: Arial, sans-serif;
 }
-p {
-    color: white;
-}
+
 h1, h2, h3 {
     color: white;
+}
+
+p{
+    color: white
 }
 a {
     padding: 0 15px;
   }
 nav {
-    background-color: rgb(37, 62, 60);
+    background-color: rgb(14, 123, 114);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
