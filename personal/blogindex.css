@@ -7,7 +7,7 @@ font-size: small;
     font-family: Arial, sans-serif;
 }
 nav {
-    background-color: rgb(203, 209, 203);
+     background-image: url(Bluredpicture.png);;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -21,7 +21,7 @@ nav {
 }
 #Gheader {
    height: 60vh;
-   background-color: blue;
+   background-image: url(whitepicture.png);
    background-size: cover;
    background-position: center;
    display: flex;
@@ -68,13 +68,63 @@ a {
   color: rgb(9, 9, 11);
 }
 #myheader {
-  
-   height: 60vh;
-   background-color: rgb(203, 209, 203);
+   background-image: url(Bluredpicture.png);
+  color: black;
+   height: 90vh;
    background-size: cover;
    background-position: center;
+  width:98%;
+  padding: 10px;
    display: flex;
+   justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 a {
     padding: 0 15px;
   }
+
+  button {
+            background-color: #3caf3f;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            margin: 0 auto;
+            padding: 15px 30px;
+            font-size: 24px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+h1 {
+  color: #550404;
+  text-align: center;
+}
+
+h2 {
+    color: #a00d0df4;
+    text-align: center;
+}
+
+h3 {
+    color: #780f0ff1
+}
+
+p {
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #f4f0f0;
+}
+
+#game{
+    color: #b30000;
+}
+
+#EF {
+    font-family: 'Lucida Handwriting', cursive;
+}
+
+#info {
+    color: #be0808ac;
+}
+

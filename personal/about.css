@@ -15,7 +15,7 @@ a {
     padding: 0 15px;
   }
 nav {
-    background-color: rgb(37, 62, 60);
+    background-color: rgb(14, 123, 114);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -26,4 +26,19 @@ nav {
     color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
+}
+
+P {
+  font-family: 'Arial', sans-serif;
+    font-size: 16px;
+  text-align: left;  
+    line-height: 2.0;
+
+}
+h2, h3 {
+  font-family: 'Arial', sans-serif;
+    font-size: 16px;
+  text-align: center;  
+    line-height: 2.0;
+
 }
