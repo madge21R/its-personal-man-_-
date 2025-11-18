@@ -7,13 +7,13 @@ font-size: small;
     font-family: Arial, sans-serif;
 }
 nav {
-     background-image: url(Bluredpicture.png);;
+     background-image: url(Bluredpicture.png);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
     color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -31,7 +31,7 @@ nav {
 }
 
 .dropbtn {
-  background-color: #d9e4e0;
+  background-color: #11cec78a;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -58,14 +58,22 @@ nav {
   text-decoration: none;
   display: block;
 }
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #03a8b495;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #d17428;}
 
 a {
   color: rgb(9, 9, 11);
+}
+#myheader {
+  
+   height: 100vh;
+  background-color: rgba(14, 123, 114, 0.463);
+   background-size: cover;
+   background-position: center;
+   display: flex;
 }
 #myheader {
    background-image: url(Bluredpicture.png);
