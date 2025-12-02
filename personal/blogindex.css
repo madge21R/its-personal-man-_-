@@ -19,6 +19,32 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
 }
+
+.navbar {
+  display: flex;              /* puts children on the same row */
+  justify-content: space-between; /* left group on left, login on right */
+  align-items: center;        /* vertically center items */
+  padding: 10px 20px;
+  background: #333;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/* remove the extra margin from the last left-link, optional */
+.nav-left a:last-child {
+  margin-right: 0;
+}
+
+.login-btn {
+  padding: 6px 14px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
 #Gheader {
    height: 60vh;
    background-image: url(whitepicture.png);
@@ -91,6 +117,11 @@ a {
 a {
     padding: 0 15px;
   }
+
+div.button {
+    text-align: left;
+    color: #000;
+        } 
 
   button {
             background-color: #3caf3f;
