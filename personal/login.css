@@ -1,11 +1,26 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f0f2f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+font-size: small;
+    margin: 10px;
+    padding: 05px;
+    background-color: rgba(13, 143, 113, 0.943);
+    
+    font-family: Arial, sans-serif;
 }
+
+nav {
+     background-color: rgb(14, 123, 114);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
 
 .login-container {
   background: #fff;
@@ -13,6 +28,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   width: 300px;
+  margin: 50px auto;
 }
 
 h2 {
@@ -49,4 +65,7 @@ button {
 
 button:hover {
   background: #159f1cff;
+}
+a{
+  padding: 0 15px;
 }
