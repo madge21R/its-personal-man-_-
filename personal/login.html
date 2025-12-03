@@ -1,86 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Login Form</title>
+  <meta charset="utf-8">
+  <title>Login</title>
   <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
-<header>
-<nav id="topmenue">
-    <br>
-    <h3 align="center">
 
-        <a href="login.html" class="logo" align="left"><img src="person.png" alt="person" /></a>
-        <a href="index.html">Home</a>
-        <a href="about.html" >about</a>
-       <a href="sabra.html">Portfolio</a>
-       <a href="contact.html">Contact</a>
-    
+  <div class="login-container">
 
-    </h3>      
-
-</nav>
-</header>
+  <h1>Login</h1>
 
 
-<div class="login-container">
-    <h2>Login</h2>
-<form id="loginForm" action="login.php" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+  <form method="post" action="login.php" autocomplete="off">
+    <label>Username or Email
+      <input type="text" name="identifier" 
+    </label><br>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-    <br>
-    <br>
-    <input type="checkbox" id="showPassword" > Show Password
+    <label>Password
+      <input type="password" name="password" required>
+    </label><br>
 
-    <br>
-    <br>
-    <button type="submit">Login</button>
-    <p id="errorMsg" style="color:red;"></p>
-</form>
+    <button type="submit">Log In</button>
+  </form>
 
-</div>
+  <p>Need an account? <a href="register.html">Register</a></p>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.getElementById('loginForm');
-    const username = document.getElementById('username');
-    const password = document.getElementById('password');
-    const showPassword = document.getElementById('showPassword');
-    const errorMsg = document.getElementById('errorMsg');
+    <p><a href="forgotpass.html">Forgot Password?</a></p>
 
-    // Show/Hide password
-    showPassword.addEventListener('change', function() {
-        password.type = this.checked ? 'text' : 'password';
-    });
-
-    // Client-side validation before submitting
-    loginForm.addEventListener('submit', function(e) {
-        errorMsg.textContent = ''; // Clear previous messages
-
-        if (username.value.trim() === '' || password.value.trim() === '') {
-            e.preventDefault(); // Stop form from submitting
-            errorMsg.textContent = 'Please fill in both username and password.';
-            return;
-        }
-
-        if (password.value.length < 6) {
-            e.preventDefault();
-            errorMsg.textContent = 'Password must be at least 6 characters.';
-            return;
-        }
-
-        // Optionally, you could add AJAX here to submit without page reload
-    });
-});
-</script>
-
-
-
+  </div>
 
 </body>
+
 </html>
+   
