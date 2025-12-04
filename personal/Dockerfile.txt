@@ -1,24 +1,53 @@
-# Use the official PHP image with Apache
+# Use official PHP with Apache
 FROM php:8.2-apache
 
-# Install mysqli and PDO MySQL extensions
-RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable mysqli pdo_mysql
+# Arguments (override at build time if needed)
+ARG UID=1000
+ARG GID=1000
 
-# Copy application files to the web server root
-COPY . /var/www/html/
+# Install system deps and PHP extensions commonly needed for web apps
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        git \
+        unzip \
+        libzip-dev \
+        libpng-dev \
+        libonig-dev \
+        libxml2-dev \
+        libicu-dev \
+        libssl-dev \
+        zip \
+    && docker-php-ext-install pdo_mysql mysqli mbstring zip intl opcache \
+    && a2enmod rewrite headers
 
+# (Optional) Install composer
+COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
 
-# Set working directory
+# Configure Apache document root to /var/www/html/public if you want front-controller
+ENV APACHE_DOCUMENT_ROOT /var/www/html/public
+
+RUN sed -ri -e "s!/var/www/html!${APACHE_DOCUMENT_ROOT}!g" /etc/apache2/sites-available/*.conf \
+    && sed -ri -e "s!/var/www/!${APACHE_DOCUMENT_ROOT%/*}/!g" /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
+# Create app directory and give ownership
 WORKDIR /var/www/html
+COPY ./app /var/www/html
 
-# Expose port 80 for web traffic
+# Ensure storage and logs are writable (if your app uses storage)
+RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
+
+# Expose port 80
 EXPOSE 80
 
-# Give Apache permission to read/write files
-RUN chown -R www-data:www-data /var/www/html
+# Install recommended PHP settings for production/dev
+# (You can add specific php.ini settings here)
+# Example: enable display_errors for development (turn off in prod)
+RUN { \
+      echo 'display_errors=Off'; \
+      echo 'memory_limit=512M'; \
+    } > /usr/local/etc/php/conf.d/custom.ini
 
-# Enable Apache mod_rewrite (optional, useful for routing)
-RUN a2enmod rewrite
+# Healthcheck (basic)
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD curl -f http://localhost/ || exit 1
 
-# Start Apache in the foreground
-CMD ["apache2-foreground"]
+# Default command inherited from base image (apache foreground)
