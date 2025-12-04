@@ -1,12 +1,31 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
+  <header>
+<nav id="topmenue" color="green">
+    <h3 align="center">
+        <a href="login.html" class="logo" align="left"><img src="person.png" alt="person" /></a>
+        <a href="index.html">Home</a>
+        <a href="About.html" >About Project</a>
+       <a href="sabra.html">Portfolio</a>
+       <a href="contact.html">Contact</a>
+   
+
+    </h3>      
+
+</nav>
+</header>
+
+<br>
+<br>
+<br>
 
   <div class="login-container">
 
@@ -15,7 +34,7 @@
 
   <form method="post" action="login.php" autocomplete="off">
     <label>Username or Email
-      <input type="text" name="identifier" 
+      <input type="text" name="identifier" required>
     </label><br>
 
     <label>Password
@@ -30,6 +49,8 @@
     <p><a href="forgotpass.html">Forgot Password?</a></p>
 
   </div>
+
+  <script src="jav.js"></script>
 
 </body>
 

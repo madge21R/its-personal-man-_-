@@ -1,14 +1,58 @@
-body { 
-    background-image:url(c26750c3-e88c-4b54-80a9-a7e8d292497d.jpg) ;
-    font-family: Arial,
-    sans-serif;
-    max-width:720px;
-    margin: 2rem auto;
-    padding: 0 1rem; 
+body{
+    font-size: small;
+    margin: 10px;
+    padding: 05px;
+    background-image: url(c26750c3-e88c-4b54-80a9-a7e8d292497d.jpg);
+    font-family: Arial, sans-serif;
 }
+
 h1 {
     text-align:center; 
     }
+
+nav {
+    background-color: rgb(14, 123, 114);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.navbar {
+  display: flex;              /* puts children on the same row */
+  justify-content: space-between; /* left group on left, login on right */
+  align-items: center;        /* vertically center items */
+  padding: 10px 20px;
+  background: #333;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/* remove the extra margin from the last left-link, optional */
+.nav-left a:last-child {
+  margin-right: 0;
+}
+
+nav.button {
+    text-align: left;
+    color: #000;
+    margin-right: 0px;
+        } 
+
+a {
+    padding: 0 15px;
+  }
+
 
     div.login-container {
     background:#fff;

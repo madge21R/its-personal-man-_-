@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="login.css">
 <title>Reset Password</title>
 </head>
@@ -11,8 +13,8 @@
 <h2>Reset Your Password</h2>
 
 <form method="POST" action="resetpass.php">
-    <input type="hidden" name="email" value="<?php echo $email; ?>">
-    <input type="hidden" name="token" value="<?php echo $token; ?>">
+    <input type="hidden" name="email" value="<?php echo $email; ?>" required>
+    <input type="hidden" name="token" value="<?php echo $token; ?>" required>
 
     <label>New Password</label>
     <input type="password" name="password" required>
@@ -24,6 +26,7 @@
     <button type="submit">Reset Password</button>
 </form>
 </div>
+<script src="jav.js"></script>
 
 </body>
 </html>

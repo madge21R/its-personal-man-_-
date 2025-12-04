@@ -118,9 +118,10 @@ a {
     padding: 0 15px;
   }
 
-div.button {
+nav.button {
     text-align: left;
     color: #000;
+    margin-right: 0px;
         } 
 
   button {
