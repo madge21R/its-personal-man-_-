@@ -38,11 +38,35 @@
 <p>Fill out the form below to send us your queries and creative ideas for our upcoming game!</p>
 <br>
 
-
-
-
-
 </article>
+
+<div class="contact-container">
+
+    <h1>Contact Form</h1>
+
+    <form method="post" action="form.php" autocomplete="off">
+
+                <p>Name <span>*</span></p>
+                <label class="icon-case" for="name"><i class="fa fa-user"></i></label>
+                <input type="text" name="name" id="name" required/>
+
+
+                <p>E-mail <span>*</span></p>
+                <label class="icon-case" for="email"><i class="fa fa-envelope-o"></i></label>
+                <input type="email" name="email" id="email" required />
+ 
+
+                <p>Message <span>*</span></p>
+                <label class="icon-case" for="msg"><i class="fa fa-comment-o"></i></label>
+                <textarea name="message" id="msg" required/></textarea>
+            <br>
+            <br>
+            <br>
+
+    <button type="submit" class="button-contact">Submit</button>
+</form>
+
+</div>
 
 </body>
 </html>
